@@ -3,13 +3,17 @@
 <head>
   <title>Spring Boot and Thymeleaf - Thymeleaf Layout Dialect</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" th:src="@{/webjars/jquery/1.11.3/jquery.min.js}" th:unless="isTemplate"></script>
-  <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}" th:unless="isTemplate"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+          th:src="@{/webjars/jquery/3.3.1/jquery.min.js}" th:unless="isTemplate"></script>
+  <script src="http://cdn.jsdelivr.net/webjars/bootstrap/4.0.0/js/bootstrap.min.js"
+          th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}" th:unless="isTemplate"></script>
   <script src="../../js/sb-admin-2.js" th:src="@{/js/sb-admin-2.js}" th:unless="isTemplate"></script>
   <script src="../../resources/metisMenu/dist/metisMenu.min.js"  th:src="@{/resources/metisMenu/dist/metisMenu.min.js}" th:unless="isTemplate"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" th:href="@{/css/common.css}" th:unless="isTemplate" />
   <link rel="stylesheet" type="text/css" media="screen" href="../../css/sb-admin-2.css" th:href="@{/css/sb-admin-2.css}" th:unless="isTemplate" />
-  <link rel="stylesheet" type="text/css" media="screen" href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" th:unless="isTemplate" />
+  <link rel="stylesheet" type="text/css" media="screen"
+        href="http://cdn.jsdelivr.net/webjars/bootstrap/4.0.0/css/bootstrap.min.css"
+        th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" th:unless="isTemplate"/>
   <link rel="stylesheet" type="text/css" media="screen" href="../../resources/metisMenu/dist/metisMenu.css" th:href="@{/resources/metisMenu/dist/metisMenu.min.css}" th:unless="isTemplate" />
   <link rel="stylesheet" type="text/css" media="screen" href="../../resources/font-awesome/css/font-awesome.min.css" th:href="@{/resources/font-awesome/css/font-awesome.min.css}" th:unless="isTemplate" />
 </head>
