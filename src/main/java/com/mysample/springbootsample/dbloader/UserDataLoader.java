@@ -16,29 +16,29 @@
  *******************************************************************************/
 package com.mysample.springbootsample.dbloader;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.stereotype.Component;
-
 import com.mysample.springbootsample.domain.Address;
 import com.mysample.springbootsample.domain.User;
 import com.mysample.springbootsample.domain.UserRole;
 import com.mysample.springbootsample.repository.UserRepository;
 import com.mysample.springbootsample.repository.UserRoleRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Component
 public class UserDataLoader implements ApplicationListener<ContextRefreshedEvent> {
-	
-	private Logger logger = Logger.getLogger(UserDataLoader.class);
-	
+
+	private Logger logger = LogManager.getLogger(UserDataLoader.class);
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private UserRoleRepository userRoleRepository;
 

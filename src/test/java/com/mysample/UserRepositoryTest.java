@@ -28,11 +28,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = {RepositoryConfig.class})
@@ -68,16 +67,17 @@ public class UserRepositoryTest {
 		addressSet.add(adminAddr2);
 
 		user.setAddressSet(addressSet);
-		
+
 		assertNull(user.getUserId());
 		userRepository.save(user);
 		assertNotNull(user.getUserId());
-		
-		User fetchedUser = userRepository.findOne(user.getUserId());
-		
+
+		Optional<User> fetchedUserOpt = userRepository.findById(user.getUserId());
+		User fetchedUser = fetchedUserOpt.get();
+
 		assertNotNull(fetchedUser);
 		assertEquals(user.getUserId(), fetchedUser.getUserId());
-		
+
 		System.out.println("TEST1: " + fetchedUser.getUsername());
 		System.out.println("TEST2: " + fetchedUser.toString());
 	}
